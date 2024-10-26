@@ -1,5 +1,5 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/media-query' as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/media-query" as *;
 
 img {
   vertical-align: middle;
@@ -29,7 +29,7 @@ thead {
 
     background-color: $light-grey;
     color: $slate;
-    
+
     height: 38px;
     width: 99.5%;
 
@@ -186,7 +186,7 @@ button {
 
         &__contact {
           padding-top: 8px;
-          padding-left: 10px;;
+          padding-left: 10px;
           width: 130px;
         }
       }
@@ -258,7 +258,6 @@ button {
         &__buttons {
           width: 15%;
           margin-right: 15px;
-
         }
       }
     }
@@ -304,5 +303,11 @@ button {
         }
       }
     }
+  }
+  .chevron {
+    transition: transform 0.3s ease;
+  }
+  #link:hover .chevron {
+    transform: translateX(4px);
   }
 }

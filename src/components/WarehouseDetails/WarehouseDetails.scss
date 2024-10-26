@@ -1,156 +1,155 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
-@use '../../App.scss' as *;
-@use '../../styles/partials/media-query' as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../App.scss" as *;
+@use "../../styles/partials/media-query" as *;
 
 .warehouse-details {
-    @include page-layout;
+  @include page-layout;
+
+  @include tablet {
+    margin: 0 2rem;
+  }
+
+  @include desktop {
+    @include desktop-layout(0);
+    max-width: 63.75rem;
+  }
+
+  &__container {
+    @include display-layout(1.5rem 0, 0 1.5rem);
 
     @include tablet {
-        margin: 0 2rem; 
+      @include display-layout(2rem 0 1.35rem 0, 0 2rem);
     }
 
     @include desktop {
-        @include desktop-layout(0);
-        max-width: 63.75rem;
+      padding-bottom: 1.375rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      margin: 0;
     }
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__box {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+
+        &--arrow {
+          height: 1.5rem;
+          width: 1.5rem;
+          cursor: pointer;
+        }
+      }
+
+      &__box-edit {
+        @include tablet {
+          display: flex;
+          align-items: center;
+          position: relative;
+        }
+        &--icon {
+          background-color: $instock-indigo;
+          border-radius: 100%;
+          padding: 0.5rem;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            background-color: $graphite;
+            transform: translateX(4px);
+          }
+
+          @include tablet {
+            width: 5.06rem;
+            height: 2.375rem;
+            border-radius: 1.25rem;
+            padding-right: 2.25rem;
+          }
+        }
+        &--text {
+          display: none;
+
+          @include tablet {
+            display: block;
+            position: absolute;
+            color: $white;
+            right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    border-top: 0.0625rem solid $cloud;
 
     &__container {
-        @include display-layout(1.5rem 0, 0 1.5rem);
+      @include display-layout($mobile-padding 0, 0 2.25rem 0 1.5rem);
+
+      @include tablet {
+        @include display-layout($tablet-padding 0, 0 5rem 0 2rem);
+        display: flex;
+      }
+
+      @include desktop {
+        margin-left: 2.5rem;
+      }
+
+      &__address {
+        @include tablet {
+          width: 43.5%;
+        }
+
+        &__text {
+          display: flex;
+          gap: 0.25rem;
+          padding-top: 0.25rem;
+
+          @include tablet {
+            flex-direction: column;
+            gap: 0;
+          }
+        }
+      }
+
+      &__bottom {
+        padding-top: 1.5rem;
+        display: flex;
 
         @include tablet {
-            @include display-layout(2rem 0 1.35rem 0, 0 2rem)
+          padding-top: 0;
+          gap: 2.5rem;
+          width: 60%;
         }
 
-        @include desktop {
-            padding-bottom: 1.375rem;
-            padding-left: 2.5rem;
-            padding-right: 2.5rem;
-            margin: 0;
+        &--name {
+          width: 55%;
+
+          @include tablet {
+            padding-left: 2rem;
+            border-left: 0.0625rem solid $cloud;
+            width: 50%;
+          }
+
+          &--text {
+            padding-top: 0.25rem;
+          }
         }
 
-        &__top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-            &__box {
-                display: flex;
-                gap: 0.5rem;
-                align-items: center;
+        &--information {
+          @include tablet {
+            width: 45%;
+          }
 
-                &--arrow {
-                    height: 1.5rem;
-                    width: 1.5rem;
-                    cursor: pointer;
-                }
-            }   
-            
-            &__box-edit {
-
-                @include tablet {
-                    display: flex;
-                    align-items: center;
-                    position: relative;
-                }
-                &--icon {
-                    background-color: $instock-indigo;
-                    border-radius: 100%;
-                    padding: 0.5rem;
-
-                    &:hover {
-                        background-color: $graphite;
-                    }
-    
-                    @include tablet {
-                        width: 5.06rem;
-                        height: 2.375rem;
-                        border-radius: 1.25rem;
-                        padding-right: 2.25rem;
-                    }
-                }
-                &--text {
-                    display: none;
-
-                    @include tablet {
-                        display: block;
-                        position: absolute;
-                        color: $white;
-                        right: 1rem;
-                    }
-                }
-            }
+          &--text {
+            padding-top: 0.25rem;
+          }
         }
+      }
     }
-
-    &__wrapper {
-        border-top: 0.0625rem solid $cloud;
-    
-        &__container {
-            @include display-layout($mobile-padding 0, 0 2.25rem 0 1.5rem);
-
-            @include tablet {
-                @include display-layout($tablet-padding 0, 0 5rem 0 2rem);
-                display: flex;
-            }
-
-            @include desktop {
-                margin-left: 2.5rem;
-            }
-
-            &__address {
-                @include tablet {
-                    width: 43.5%;
-                }
-
-                &__text {
-                    display: flex;
-                    gap: 0.25rem;
-                    padding-top: 0.25rem;
-
-                    @include tablet {
-                        flex-direction: column;  
-                        gap: 0;                      
-                    }
-                }
-            }
-
-            &__bottom {
-                padding-top: 1.5rem;
-                display: flex;
-
-                @include tablet {
-                    padding-top: 0;
-                    gap: 2.5rem;
-                    width: 60%;
-                }
-
-                &--name {
-                    width: 55%;
-
-                    @include tablet {
-                        padding-left: 2rem;
-                        border-left:0.0625rem solid $cloud;
-                        width: 50%;
-                    }
-
-                    &--text {
-                        padding-top: 0.25rem;                       
-                    }
-                }                 
-
-                &--information {
-                    @include tablet {
-                        width: 45%;
-                    }
-
-                    &--text {
-                        padding-top: 0.25rem;                        
-                    }
-
-                }
-                    
-            }
-        }
-    }
+  }
 }
