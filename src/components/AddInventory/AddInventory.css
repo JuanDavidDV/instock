@@ -1,1 +1,289 @@
-/*# sourceMappingURL=AddInventory.css.map */
+@font-face {
+  font-family: "TitilliumWeb-Regular";
+  src: url(../../assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TitilliumWeb-Semibold";
+  src: url(../../assets/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+body {
+  background-color: #f7f8f9;
+}
+
+.inventory-form {
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  background-color: #ffffff;
+  border-radius: 0.125rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  width: 90%;
+  margin-top: -4.7rem;
+  /* Section for handling status and dynamic fields */
+}
+@media (min-width: 768px) {
+  .inventory-form {
+    margin-top: -4.7rem;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.inventory-form__header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #bdc5d5;
+}
+@media (min-width: 768px) {
+  .inventory-form__header {
+    border-bottom: 1px solid #bdc5d5;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+.inventory-form__title {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "TitilliumWeb-Semibold";
+  color: #13182c;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .inventory-form__title {
+    font-size: 2rem;
+  }
+}
+.inventory-form__label-text {
+  font-family: "TitilliumWeb-Semibold";
+  padding-right: 50%;
+  display: flex;
+  font-size: 0.875rem;
+  margin-bottom: 0.1rem;
+}
+@media (min-width: 768px) {
+  .inventory-form__label-text {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  .inventory-form__info {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.inventory-form__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .inventory-form__section {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 768px) {
+  .inventory-form__section1 {
+    width: 45%;
+    padding-right: 1rem;
+    border-right: 1px solid #bdc5d5;
+  }
+}
+@media (min-width: 768px) {
+  .inventory-form__section2 {
+    width: 45%;
+  }
+}
+.inventory-form__details {
+  margin-bottom: 1.5rem;
+  border-top: 1px solid #bdc5d5;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .inventory-form__details {
+    width: 50%;
+    border-top: none;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+  }
+}
+.inventory-form__label {
+  font-size: 0.6875rem;
+  line-height: 1.625rem;
+  font-family: "TitilliumWeb-Regular";
+  color: #13182c;
+  margin-bottom: 0.5rem;
+  font-family: "TitilliumWeb-Semibold";
+}
+@media (min-width: 768px) {
+  .inventory-form__label {
+    padding: 0;
+  }
+}
+.inventory-form__label-title {
+  padding-bottom: 1rem;
+}
+.inventory-form__label-title2 {
+  border-top: 1px solid #bdc5d5;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .inventory-form__label-title2 {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    border-top: none;
+  }
+}
+.inventory-form__input {
+  width: 100%;
+  height: 2.975rem;
+  padding: 0.75rem;
+  border: 1px solid #bdc5d5;
+  border-radius: 1.2rem;
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
+  color: #232940;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s;
+}
+@media (min-width: 768px) {
+  .inventory-form__input {
+    width: 100%;
+    border-radius: 1.3rem;
+  }
+}
+.inventory-form__input::-moz-placeholder {
+  font-family: "TitilliumWeb-Semibold";
+  font-weight: 100;
+  float: left;
+  font-size: 0.7rem;
+}
+.inventory-form__input::placeholder {
+  font-family: "TitilliumWeb-Semibold";
+  font-weight: 100;
+  float: left;
+  font-size: 0.7rem;
+}
+.inventory-form__input:focus {
+  border-color: #2e66e5;
+  outline: none;
+}
+.inventory-form__chevron {
+  position: relative;
+  left: 92%;
+  bottom: 3.1rem;
+}
+.inventory-form__error {
+  color: #c94515;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  margin-top: 0.25rem;
+  border-color: #c94515;
+}
+.inventory-form__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  background-color: #f7f8f9;
+}
+@media (min-width: 768px) {
+  .inventory-form__actions {
+    justify-content: flex-end;
+    margin-top: 0;
+    height: 3.785rem;
+  }
+}
+.inventory-form__button {
+  height: 2.375rem;
+  font-size: 0.8125rem;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  font-family: "TitilliumWeb-Semibold";
+}
+@media (min-width: 768px) {
+  .inventory-form__button {
+    width: 20%;
+  }
+}
+.inventory-form__button--cancel {
+  background-color: #ffffff;
+  color: #232940;
+  flex: 1;
+  margin-right: 1rem;
+  border: 1px solid #bdc5d5;
+}
+@media (min-width: 768px) {
+  .inventory-form__button--cancel {
+    flex: none;
+    width: 10%;
+  }
+}
+.inventory-form__button--cancel:hover {
+  color: #2e66e5;
+  border-color: #2e66e5;
+}
+.inventory-form__button--submit {
+  background-color: #2e66e5;
+  color: #ffffff;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .inventory-form__button--submit {
+    flex: none;
+    margin-right: 1rem;
+  }
+}
+.inventory-form__button--submit:hover {
+  background-color: #13182c;
+  color: #ffffff;
+}
+.inventory-form__success {
+  color: #158463;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  margin-top: 0.25rem;
+}
+.inventory-form-block {
+  display: flex;
+  width: 8rem;
+}
+.inventory-form__icon {
+  padding-bottom: 1.3rem;
+}
+.inventory-form__status {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 0.8rem;
+}
+@media (min-width: 768px) {
+  .inventory-form__status {
+    justify-content: flex-start;
+  }
+}
+.inventory-form__status-options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.inventory-form__quantity {
+  display: none;
+}
+.inventory-form__quantity--visible {
+  display: block;
+}
+.inventory-form textarea {
+  height: 7rem;
+}
+.inventory-form label {
+  font-family: "TitilliumWeb-Regular";
+}/*# sourceMappingURL=AddInventory.css.map */
